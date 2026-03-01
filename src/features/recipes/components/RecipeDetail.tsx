@@ -29,7 +29,7 @@ export const RecipeDetail = ({ recipe }: RecipeDetailProps) => {
         <div className="mb-8 overflow-hidden rounded-2xl">
           <img
             src={imageUrl}
-            alt={recipe.title}
+            alt={recipe.title ?? ''}
             className="h-[400px] w-full object-cover"
           />
         </div>

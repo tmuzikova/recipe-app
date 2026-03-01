@@ -21,7 +21,9 @@ function getSanityClient() {
     );
   }
   if (!token) {
-    throw new Error('Missing SANITY_API_TOKEN in environment (.env.local)');
+    throw new Error(
+      'Missing SANITY_API_TOKEN (set in Netlify env vars, not VITE_ – token must stay server-side only)',
+    );
   }
 
   return createClient({

@@ -13,16 +13,18 @@ export const RecipeCard = ({ recipe }: RecipeCardProps) => {
   const { t } = useTranslation();
   const imageUrl = recipe.mainImage?.asset?.url;
 
+  const slug = recipe.slug?.current ?? '';
+
   return (
     <Link
-      to={`/recipes/${recipe.slug.current}`}
+      to={`/recipes/${slug}`}
       className="group block overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-xl"
     >
       <div className="aspect-4/3 overflow-hidden bg-gray-100">
         {imageUrl ? (
           <img
             src={imageUrl}
-            alt={recipe.title}
+            alt={recipe.title ?? ''}
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
