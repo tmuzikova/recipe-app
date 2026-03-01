@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "Recipes App",
+    "description": "Discover and explore delicious recipes from around the world."
+  },
+  "nav": {
+    "recipes": "Recipes",
+    "addRecipe": "Add Recipe"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "welcome": "Welcome to"
+    },
+    "featuredRecipes": "Featured Recipes",
+    "error": {
+      "failedLoad": "Failed to load recipes. Please check your Sanity configuration."
+    },
+    "empty": {
+      "noRecipes": "No featured recipes yet. Add some in the Sanity Studio!"
+    }
+  },
+  "notFound": {
+    "heading": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home"
+  },
+  "recipe": {
+    "error": {
+      "failedLoad": "Failed to load recipe."
+    },
+    "notFound": {
+      "heading": "Recipe not found",
+      "description": "The recipe you're looking for doesn't exist."
+    },
+    "card": {
+      "minutes": "min",
+      "servings": "servings"
+    },
+    "detail": {
+      "backToRecipes": "Back to recipes",
+      "minutes": "minutes",
+      "servings": "servings"
+    },
+    "ingredients": {
+      "heading": "Ingredients"
+    },
+    "instructions": {
+      "heading": "Instructions"
+    }
+  },
+  "createRecipe": {
+    "heading": "New Recipe",
+    "subheading": "Fill in the form and the recipe will be automatically saved to Sanity CMS."
+  },
+  "form": {
+    "label": {
+      "title": "Recipe title",
+      "description": "Description",
+      "image": "Recipe image",
+      "category": "Category",
+      "cookingTime": "Cooking time (min)",
+      "servings": "Servings",
+      "featured": "Feature recipe on home page",
+      "ingredients": "Ingredients",
+      "instructions": "Instructions",
+      "instructionsHint": "(each step on a new line)"
+    },
+    "placeholder": {
+      "title": "Beef Wellington",
+      "description": "Brief recipe description...",
+      "category": "-- select --",
+      "ingredient": "Ingredient",
+      "amount": "Amount",
+      "unit": "Unit",
+      "instructions": "Preheat oven to 180°C.\nMix flour with sugar.\nBake for 30 minutes."
+    },
+    "upload": {
+      "click": "Click to upload an image",
+      "hint": "PNG, JPG, WEBP up to 10 MB"
+    },
+    "aria": {
+      "removeImage": "Remove image",
+      "removeIngredient": "Remove ingredient"
+    },
+    "addIngredient": "Add ingredient",
+    "imagePreviewAlt": "Image preview",
+    "submit": {
+      "submitting": "Saving...",
+      "save": "Save recipe"
+    },
+    "cancel": "Cancel",
+    "error": {
+      "generic": "Failed to save recipe.",
+      "checkIngredients": "Check ingredient names"
+    }
+  },
+  "validation": {
+    "ingredient": {
+      "nameRequired": "Ingredient name is required"
+    },
+    "recipe": {
+      "titleRequired": "Recipe title is required"
+    },
+    "cookingTime": {
+      "positive": "Must be a positive number"
+    },
+    "servings": {
+      "min": "Must be at least 1"
+    },
+    "image": {
+      "size": "Image must be smaller than 10 MB",
+      "type": "File must be an image"
+    }
+  },
+  "categories": {
+    "Snídaně": "Breakfast",
+    "Hlavní jídlo": "Main course",
+    "Dezert": "Dessert",
+    "Drink": "Drink",
+    "Svačina": "Snack"
+  }
+}

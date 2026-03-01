@@ -1,0 +1,125 @@
+{
+  "app": {
+    "name": "Recipes App",
+    "description": "Objevujte a prozkoumávejte lahodné recepty z celého světa."
+  },
+  "nav": {
+    "recipes": "Recepty",
+    "addRecipe": "Přidat recept"
+  },
+  "footer": {
+    "rights": "Všechna práva vyhrazena."
+  },
+  "home": {
+    "hero": {
+      "welcome": "Vítejte v"
+    },
+    "featuredRecipes": "Doporučené recepty",
+    "error": {
+      "failedLoad": "Nepodařilo se načíst recepty. Zkontrolujte konfiguraci Sanity."
+    },
+    "empty": {
+      "noRecipes": "Zatím žádné doporučené recepty. Přidejte je v Sanity Studio!"
+    }
+  },
+  "notFound": {
+    "heading": "Stránka nenalezena",
+    "description": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+    "backHome": "Zpět na hlavní stránku"
+  },
+  "recipe": {
+    "error": {
+      "failedLoad": "Nepodařilo se načíst recept."
+    },
+    "notFound": {
+      "heading": "Recept nenalezen",
+      "description": "Recept, který hledáte, neexistuje."
+    },
+    "card": {
+      "minutes": "min",
+      "servings": "porcí"
+    },
+    "detail": {
+      "backToRecipes": "Zpět na recepty",
+      "minutes": "minut",
+      "servings": "porcí"
+    },
+    "ingredients": {
+      "heading": "Ingredience"
+    },
+    "instructions": {
+      "heading": "Postup přípravy"
+    }
+  },
+  "createRecipe": {
+    "heading": "Nový recept",
+    "subheading": "Vyplň formulář a recept se automaticky uloží do Sanity CMS."
+  },
+  "form": {
+    "label": {
+      "title": "Název receptu",
+      "description": "Popis",
+      "image": "Obrázek receptu",
+      "category": "Kategorie",
+      "cookingTime": "Doba přípravy (min)",
+      "servings": "Počet porcí",
+      "featured": "Zvýraznit recept na hlavní stránce",
+      "ingredients": "Ingredience",
+      "instructions": "Postup přípravy",
+      "instructionsHint": "(každý krok na nový řádek)"
+    },
+    "placeholder": {
+      "title": "Svíčková na smetaně",
+      "description": "Krátký popis receptu...",
+      "category": "-- vyber --",
+      "ingredient": "Ingredience",
+      "amount": "Množství",
+      "unit": "Jednotka",
+      "instructions": "Předehřejte troubu na 180°C.\nSmíchejte mouku s cukrem.\nPečte 30 minut."
+    },
+    "upload": {
+      "click": "Klikni pro nahrání obrázku",
+      "hint": "PNG, JPG, WEBP do 10 MB"
+    },
+    "aria": {
+      "removeImage": "Odebrat obrázek",
+      "removeIngredient": "Odebrat ingredienci"
+    },
+    "addIngredient": "Přidat ingredienci",
+    "imagePreviewAlt": "Náhled obrázku",
+    "submit": {
+      "submitting": "Ukládám...",
+      "save": "Uložit recept"
+    },
+    "cancel": "Zrušit",
+    "error": {
+      "generic": "Nepodařilo se uložit recept.",
+      "checkIngredients": "Zkontroluj názvy ingrediencí"
+    }
+  },
+  "validation": {
+    "ingredient": {
+      "nameRequired": "Název ingredience je povinný"
+    },
+    "recipe": {
+      "titleRequired": "Název receptu je povinný"
+    },
+    "cookingTime": {
+      "positive": "Musí být kladné číslo"
+    },
+    "servings": {
+      "min": "Musí být alespoň 1"
+    },
+    "image": {
+      "size": "Obrázek musí být menší než 10 MB",
+      "type": "Soubor musí být obrázek"
+    }
+  },
+  "categories": {
+    "Snídaně": "Snídaně",
+    "Hlavní jídlo": "Hlavní jídlo",
+    "Dezert": "Dezert",
+    "Drink": "Drink",
+    "Svačina": "Svačina"
+  }
+}
