@@ -4,6 +4,6 @@ import { env } from '@/config/env';
 export const sanityClient = createClient({
   projectId: env.sanity.projectId,
   dataset: env.sanity.dataset,
-  apiVersion: '2024-01-01',
+  apiVersion: '2026-03-02',
   useCdn: true,
 });
