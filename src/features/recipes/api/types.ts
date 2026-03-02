@@ -8,7 +8,7 @@ export type {
   Slug,
 } from '@/sanity.types';
 
-export type RecipeSummary =
+export type FeaturedRecipe =
   import('@/sanity.types').FEATURED_RECIPES_QUERYResult[number];
 export type RecipeDetail = NonNullable<
   import('@/sanity.types').RECIPE_BY_SLUG_QUERYResult

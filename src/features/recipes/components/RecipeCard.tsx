@@ -1,12 +1,12 @@
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import type { RecipeSummary } from '../api/types';
+import type { FeaturedRecipe } from '../api/types';
 import ClockIcon from '@/assets/icons/clock.svg?react';
 import UsersIcon from '@/assets/icons/users.svg?react';
 import ImagePlaceholderIcon from '@/assets/icons/image-placeholder.svg?react';
 
 type RecipeCardProps = {
-  recipe: RecipeSummary;
+  recipe: FeaturedRecipe;
 };
 
 export const RecipeCard = ({ recipe }: RecipeCardProps) => {
