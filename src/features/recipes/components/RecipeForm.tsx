@@ -8,6 +8,7 @@ import {
   type RecipeFormValues,
 } from '../types/recipeForm';
 import { createRecipe } from '../api/createRecipe';
+import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/Button';
 import { FormField } from '@/components/ui/FormField';
 import { Input } from '@/components/ui/Input';
@@ -28,6 +29,7 @@ const CATEGORIES = [
 export const RecipeForm = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { getToken } = useAuth();
   const [submitError, setSubmitError] = useState<string | null>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
@@ -76,7 +78,7 @@ export const RecipeForm = () => {
   const onSubmit = async (values: RecipeFormValues) => {
     setSubmitError(null);
     try {
-      const slug = await createRecipe(values);
+      const slug = await createRecipe(values, getToken);
       await navigate(`/recipes/${slug}`);
     } catch (err) {
       setSubmitError(

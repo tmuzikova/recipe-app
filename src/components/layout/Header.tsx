@@ -3,9 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { APP_NAME } from '@/config/constants';
 import PlusIcon from '@/assets/icons/plus.svg?react';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { useAuth } from '@/contexts/AuthContext';
+import { Button } from '@/components/ui/Button';
 
 export const Header = () => {
   const { t } = useTranslation();
+  const { user, login, logout } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
@@ -22,13 +25,24 @@ export const Header = () => {
           >
             {t('nav.recipes')}
           </Link>
-          <Link
-            to="/recipes/new"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
-          >
-            <PlusIcon className="h-4 w-4" />
-            {t('nav.addRecipe')}
-          </Link>
+          {user ? (
+            <>
+              <Link
+                to="/recipes/new"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
+              >
+                <PlusIcon className="h-4 w-4" />
+                {t('nav.addRecipe')}
+              </Link>
+              <Button variant="ghost" size="sm" onClick={logout}>
+                {t('nav.logOut')}
+              </Button>
+            </>
+          ) : (
+            <Button variant="primary" size="sm" onClick={login}>
+              {t('nav.logIn')}
+            </Button>
+          )}
           <LanguageSwitcher />
         </nav>
       </div>

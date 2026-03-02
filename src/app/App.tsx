@@ -1,3 +1,8 @@
+import { AuthProvider } from '@/contexts/AuthContext';
 import { AppRouter } from '@/routes';
 
-export const App = () => <AppRouter />;
+export const App = () => (
+  <AuthProvider>
+    <AppRouter />
+  </AuthProvider>
+);

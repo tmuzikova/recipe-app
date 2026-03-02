@@ -10,6 +10,7 @@ const toBase64 = (file: File): Promise<string> =>
 
 export const createRecipe = async (
   values: RecipeFormValues,
+  getToken?: () => Promise<string | null>,
 ): Promise<string> => {
   const body: Record<string, unknown> = { ...values, image: undefined };
 
@@ -19,9 +20,17 @@ export const createRecipe = async (
     body.imageMimeType = values.image.type;
   }
 
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+  };
+  const token = getToken ? await getToken() : null;
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
   const res = await fetch('/.netlify/functions/create-recipe', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     body: JSON.stringify(body),
   });
 

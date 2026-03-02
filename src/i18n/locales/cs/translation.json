@@ -5,7 +5,16 @@
   },
   "nav": {
     "recipes": "Recepty",
-    "addRecipe": "Přidat recept"
+    "addRecipe": "Přidat recept",
+    "logIn": "Přihlásit se",
+    "logOut": "Odhlásit se"
+  },
+  "auth": {
+    "loading": "Načítám…",
+    "loginRequired": "Přihlášení nutné",
+    "loginToAddRecipe": "Pro přidání receptu se musíte přihlásit.",
+    "logIn": "Přihlásit se",
+    "logOut": "Odhlásit se"
   },
   "footer": {
     "rights": "Všechna práva vyhrazena."

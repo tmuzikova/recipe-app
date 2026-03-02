@@ -5,7 +5,16 @@
   },
   "nav": {
     "recipes": "Recipes",
-    "addRecipe": "Add Recipe"
+    "addRecipe": "Add Recipe",
+    "logIn": "Log in",
+    "logOut": "Log out"
+  },
+  "auth": {
+    "loading": "Loading…",
+    "loginRequired": "Login required",
+    "loginToAddRecipe": "You need to log in to add a recipe.",
+    "logIn": "Log in",
+    "logOut": "Log out"
   },
   "footer": {
     "rights": "All rights reserved."

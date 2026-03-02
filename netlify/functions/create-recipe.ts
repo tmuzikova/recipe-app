@@ -43,9 +43,34 @@ const slugify = (text: string): string =>
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 
-export const handler: Handler = async (event) => {
+function getNetlifyUser(context: {
+  clientContext?: { custom?: { netlify?: string } };
+}) {
+  const raw = context.clientContext?.custom?.netlify;
+  if (!raw) return null;
+  try {
+    const decoded = Buffer.from(raw, 'base64').toString('utf-8');
+    const { user } = JSON.parse(decoded) as { user?: unknown };
+    return user ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export const handler: Handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+
+  const user = getNetlifyUser(context);
+  if (!user) {
+    return {
+      statusCode: 401,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        error: 'Unauthorized. Please log in to add recipes.',
+      }),
+    };
   }
 
   try {
