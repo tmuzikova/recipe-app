@@ -38,6 +38,8 @@ function getSanityClient() {
 const slugify = (text: string): string =>
   text
     .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .trim()
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
