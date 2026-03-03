@@ -4,14 +4,14 @@ import {
   type SupportedLanguage,
 } from '@/config/constants';
 
-const LANGUAGE_LABELS: Record<SupportedLanguage, string> = {
+const LANGUAGE_LABELS = {
   cs: 'CS',
   en: 'EN',
-};
+} as const satisfies Record<SupportedLanguage, string>;
 
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  const currentLang = i18n.language.slice(0, 2) as SupportedLanguage;
+  const currentLang = i18n.language.slice(0, 2);
 
   const handleChange = (lang: SupportedLanguage) => {
     i18n.changeLanguage(lang);

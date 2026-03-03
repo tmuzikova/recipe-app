@@ -1,6 +1,5 @@
+import type { TFunction } from 'i18next';
 import { z } from 'zod';
-
-type TFunction = (key: string) => string;
 
 export const createIngredientSchema = (t: TFunction) =>
   z.object({
