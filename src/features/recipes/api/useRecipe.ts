@@ -3,26 +3,37 @@ import { sanityClient } from '@/lib/sanityClient';
 import { RECIPE_BY_SLUG_QUERY } from './queries';
 import type { RecipeDetail } from './types';
 
+type State = {
+  data: RecipeDetail | null;
+  loading: boolean;
+  error: Error | null;
+};
+
 export const useRecipe = (slug: string) => {
-  const [data, setData] = useState<RecipeDetail | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
+  const [state, setState] = useState<State>({
+    data: null,
+    loading: !!slug,
+    error: null,
+  });
 
   useEffect(() => {
-    if (!slug) {
-      setLoading(false);
-      return;
-    }
+    if (!slug) return;
 
-    setLoading(true);
-    setError(null);
+    let cancelled = false;
 
     sanityClient
       .fetch<RecipeDetail>(RECIPE_BY_SLUG_QUERY, { slug })
-      .then(setData)
-      .catch(setError)
-      .finally(() => setLoading(false));
+      .then((data) => {
+        if (!cancelled) setState({ data, loading: false, error: null });
+      })
+      .catch((error) => {
+        if (!cancelled) setState({ data: null, loading: false, error });
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
 
-  return { data, loading, error };
+  return { data: state.data, loading: state.loading, error: state.error };
 };
