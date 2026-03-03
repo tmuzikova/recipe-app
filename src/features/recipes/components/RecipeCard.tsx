@@ -55,7 +55,7 @@ export const RecipeCard = ({ recipe }: RecipeCardProps) => {
           {recipe.cookingTime && (
             <span className="flex items-center gap-1">
               <ClockIcon className="h-3.5 w-3.5" />
-              {recipe.cookingTime} {t('recipe.card.minutes')}
+              {t('recipe.card.minutes', { count: recipe.cookingTime })}
             </span>
           )}
           {recipe.servings && (

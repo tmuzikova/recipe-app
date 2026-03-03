@@ -45,15 +45,16 @@
       "description": "The recipe you're looking for doesn't exist."
     },
     "card": {
-      "minutes": "min",
-      "servings_one": "serving",
-      "servings_other": "servings"
+      "minutes": "{{count}} min",
+      "servings_one": "{{count}} serving",
+      "servings_other": "{{count}} servings"
     },
     "detail": {
       "backToRecipes": "Back to recipes",
-      "minutes": "minutes",
-      "servings_one": "serving",
-      "servings_other": "servings"
+      "minutes_one": "{{count}} minute",
+      "minutes_other": "{{count}} minutes",
+      "servings_one": "{{count}} serving",
+      "servings_other": "{{count}} servings"
     },
     "ingredients": {
       "heading": "Ingredients"

@@ -52,7 +52,7 @@ export const RecipeDetail = ({ recipe }: RecipeDetailProps) => {
           {recipe.cookingTime && (
             <div className="flex items-center gap-2">
               <ClockIcon className="h-5 w-5 text-gray-400" />
-              {recipe.cookingTime} {t('recipe.detail.minutes')}
+              {t('recipe.detail.minutes', { count: recipe.cookingTime })}
             </div>
           )}
           {recipe.servings && (

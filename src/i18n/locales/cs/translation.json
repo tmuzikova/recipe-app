@@ -45,17 +45,19 @@
       "description": "Recept, který hledáte, neexistuje."
     },
     "card": {
-      "minutes": "min",
-      "servings_one": "porce",
-      "servings_few": "porce",
-      "servings_other": "porcí"
+      "minutes": "{{count}} min",
+      "servings_one": "{{count}} porce",
+      "servings_few": "{{count}} porce",
+      "servings_other": "{{count}} porcí"
     },
     "detail": {
       "backToRecipes": "Zpět na recepty",
-      "minutes": "minut",
-      "servings_one": "porce",
-      "servings_few": "porce",
-      "servings_other": "porcí"
+      "minutes_one": "{{count}} minuta",
+      "minutes_few": "{{count}} minuty",
+      "minutes_other": "{{count}} minut",
+      "servings_one": "{{count}} porce",
+      "servings_few": "{{count}} porce",
+      "servings_other": "{{count}} porcí"
     },
     "ingredients": {
       "heading": "Ingredience"
