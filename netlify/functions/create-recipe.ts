@@ -35,7 +35,7 @@ function getSanityClient() {
   });
 }
 
-const slugify = (text: string): string =>
+export const slugify = (text: string): string =>
   text
     .toLowerCase()
     .normalize('NFD')
@@ -45,7 +45,7 @@ const slugify = (text: string): string =>
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 
-function getNetlifyUser(context: {
+export function getNetlifyUser(context: {
   clientContext?: { custom?: { netlify?: string } };
 }) {
   const raw = context.clientContext?.custom?.netlify;
