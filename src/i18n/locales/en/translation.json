@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Recipes App",
+    "name": "YumApp",
     "description": "Discover and explore delicious recipes from around the world."
   },
   "nav": {
@@ -46,12 +46,14 @@
     },
     "card": {
       "minutes": "min",
-      "servings": "servings"
+      "servings_one": "serving",
+      "servings_other": "servings"
     },
     "detail": {
       "backToRecipes": "Back to recipes",
       "minutes": "minutes",
-      "servings": "servings"
+      "servings_one": "serving",
+      "servings_other": "servings"
     },
     "ingredients": {
       "heading": "Ingredients"

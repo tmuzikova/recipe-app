@@ -61,7 +61,7 @@ export const RecipeCard = ({ recipe }: RecipeCardProps) => {
           {recipe.servings && (
             <span className="flex items-center gap-1">
               <UsersIcon className="h-3.5 w-3.5" />
-              {recipe.servings} {t('recipe.card.servings')}
+              {t('recipe.card.servings', { count: recipe.servings })}
             </span>
           )}
         </div>

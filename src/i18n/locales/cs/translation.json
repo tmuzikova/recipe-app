@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Recipes App",
+    "name": "YumApp",
     "description": "Objevujte a prozkoumávejte lahodné recepty z celého světa."
   },
   "nav": {
@@ -46,12 +46,16 @@
     },
     "card": {
       "minutes": "min",
-      "servings": "porcí"
+      "servings_one": "porce",
+      "servings_few": "porce",
+      "servings_other": "porcí"
     },
     "detail": {
       "backToRecipes": "Zpět na recepty",
       "minutes": "minut",
-      "servings": "porcí"
+      "servings_one": "porce",
+      "servings_few": "porce",
+      "servings_other": "porcí"
     },
     "ingredients": {
       "heading": "Ingredience"

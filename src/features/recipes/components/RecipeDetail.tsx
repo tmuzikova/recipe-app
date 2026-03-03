@@ -58,7 +58,7 @@ export const RecipeDetail = ({ recipe }: RecipeDetailProps) => {
           {recipe.servings && (
             <div className="flex items-center gap-2">
               <UsersIcon className="h-5 w-5 text-gray-400" />
-              {recipe.servings} {t('recipe.detail.servings')}
+              {t('recipe.detail.servings', { count: recipe.servings })}
             </div>
           )}
         </div>

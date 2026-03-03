@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { APP_NAME } from '@/config/constants';
 import { useFeaturedRecipes } from '@/features/recipes/api/useFeaturedRecipes';
 import { RecipeCard } from '@/features/recipes/components/RecipeCard';
 import { Spinner } from '@/components/ui/Spinner';
@@ -14,7 +13,7 @@ export const HomePage = () => {
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
             {t('home.hero.welcome')}
-            <span className="text-primary-600">{APP_NAME}</span>
+            <span className="text-primary-600">{t('app.name')}</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-gray-500">
             {t('app.description')}

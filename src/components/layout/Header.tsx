@@ -1,8 +1,7 @@
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import { APP_NAME } from '@/config/constants';
 import PlusIcon from '@/assets/icons/plus.svg?react';
-import { LanguageSwitcher } from './LanguageSwitcher';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/Button';
 
@@ -15,7 +14,9 @@ export const Header = () => {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
           <span className="text-2xl">🍳</span>
-          <span className="text-lg font-bold text-gray-900">{APP_NAME}</span>
+          <span className="text-lg font-bold text-gray-900">
+            {t('app.name')}
+          </span>
         </Link>
 
         <nav className="flex items-center gap-4">
